@@ -1,4 +1,4 @@
 /node_modules/
 
-/public/bundle.js
-/public/leaflet.js
+/client/bundle.js
+/client/leaflet.css

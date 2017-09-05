@@ -21,7 +21,6 @@ header {
 	flex: 1 1 auto;
 }
 
-
 #url-entry {
 	width: 25rem;
 }
@@ -30,8 +29,20 @@ header {
 	width: 100%;
 }
 
+#do-it {
+	background-color: #6CA300;
+	color: #fafafa;
+	font-weight: 500;
+	font-family: "Avenir Next", "Avenir", sans-serif;
+	font-size: 1.25rem;
+	border: 1px solid #6CA300;
+	border-radius: 0.4rem;
+	/*border-bottom: 1px solid #509000;*/
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	padding: 0.4rem 0.8rem;
+}
+
 #map {
 	flex: 1;
-	/*height: 100vh;*/
 	margin: 1rem 0 1rem 1rem;
 }
