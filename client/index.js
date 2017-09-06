@@ -47,10 +47,13 @@ function map_these_urls_handler() {
 				leaflet.marker([place.latitude, place.longitude])
 					.bindPopup(place.title)
 					.addTo(marker_layer));
-			map.fitBounds(marker_layer.getBounds());
 		}).catch(function(reason) {
 			console.error(reason);
 		}));
+
+	Promise.all(request_promises).then(function() {
+		map.fitBounds(marker_layer.getBounds());
+	});
 }
 
 function start() {
