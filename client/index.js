@@ -56,9 +56,5 @@ function map_these_urls_handler() {
 	});
 }
 
-function start() {
-	initialize_map();
-	document.getElementById('do-it').addEventListener('click', map_these_urls_handler);
-}
-
-start();
+initialize_map();
+document.getElementById('do-it').addEventListener('click', map_these_urls_handler);
