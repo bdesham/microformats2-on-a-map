@@ -1,5 +1,6 @@
-require('whatwg-fetch');
 const leaflet = require('leaflet');
+require('leaflet.markercluster');
+require('whatwg-fetch');
 
 let map;
 let marker_layer;
@@ -34,7 +35,9 @@ function initialize_map() {
 	});
 	map.addLayer(osm_layer);
 
-	marker_layer = new leaflet.featureGroup();
+	marker_layer = new leaflet.markerClusterGroup({
+		showCoverageOnHover: false
+	});
 	map.addLayer(marker_layer);
 }
 

@@ -3,3 +3,4 @@ npm-debug.log
 
 /client/bundle.js
 /client/leaflet.css
+/client/MarkerCluster*.css
