@@ -21,7 +21,7 @@ function initialize_map() {
 		minZoom: 1,
 		maxZoom: 16,
 		attribution: osm_attribution
-	});		
+	});
 	map.addLayer(osm_layer);
 
 	marker_layer = new leaflet.featureGroup();
