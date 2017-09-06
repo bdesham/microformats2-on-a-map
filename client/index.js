@@ -40,9 +40,9 @@ function map_these_urls_handler() {
 			qs: {
 				url: url,
 			},
-			gzip: true
-		}).then(function(data) {
-			const places = JSON.parse(data);
+			gzip: true,
+			json: true
+		}).then(function(places) {
 			places.forEach(place =>
 				leaflet.marker([place.latitude, place.longitude])
 					.bindPopup(place.title)
