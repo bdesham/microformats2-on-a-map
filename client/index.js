@@ -2,6 +2,7 @@ const leaflet = require('leaflet');
 const request = require('request-promise-native');
 
 let map;
+let marker_layer;
 
 // Returns, in an array, all the parts of "text" that look like HTTP or HTTPS URLs.
 function extract_urls(text) {
@@ -21,27 +22,18 @@ function initialize_map() {
 		maxZoom: 16,
 		attribution: osm_attribution
 	});		
-
 	map.addLayer(osm_layer);
-}
 
-function handle_mf2_data(data, url) {
-	const places = JSON.parse(data);
-	return places.map(place => Object.assign({annotation: url}, place));
-}
-
-function add_markers(places) {
-	places.forEach(place =>
-		leaflet.marker([place.latitude, place.longitude])
-			.bindPopup(place.annotation)
-			.addTo(map));
+	marker_layer = new leaflet.featureGroup();
+	map.addLayer(marker_layer);
 }
 
 function map_these_urls_handler() {
+	marker_layer.clearLayers();
+
 	const entered_text = document.getElementById('urls').value;
 
-	let urls = extract_urls(entered_text);
-	urls = urls.slice(0, 1);
+	const urls = extract_urls(entered_text);
 	const request_promises = urls.map(url =>
 		request.get({
 			uri: document.location.origin + '/extract_locations',
@@ -49,9 +41,14 @@ function map_these_urls_handler() {
 				url: url,
 			},
 			gzip: true
-		}).then(data => handle_mf2_data(data, url))
-		.then(add_markers)
-		.catch(function(reason) {
+		}).then(function(data) {
+			const places = JSON.parse(data);
+			places.forEach(place =>
+				leaflet.marker([place.latitude, place.longitude])
+					.bindPopup(place.title)
+					.addTo(marker_layer));
+			map.fitBounds(marker_layer.getBounds());
+		}).catch(function(reason) {
 			console.error(reason);
 		}));
 }
