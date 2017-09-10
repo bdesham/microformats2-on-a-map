@@ -7,17 +7,16 @@
     "build": "browserify client/index.js -o client/bundle.js",
     "dev": "concurrently \"watchify client/index.js -o client/bundle.js\" \"npm start\"",
     "postinstall": "cp node_modules/leaflet/dist/leaflet.css node_modules/leaflet.markercluster/dist/MarkerCluster*.css client",
-    "start": "node server/index.js",
-    "test": "node test.js | tap-spec"
+    "start": "node server/index.js"
   },
-  "author": "Benjamin Esham",
-  "license": "GPL-3.0",
   "keywords": [
     "microformats2",
     "map",
     "mapping",
     "visualization"
   ],
+  "author": "Benjamin Esham",
+  "license": "GPL-3.0",
   "dependencies": {
     "browserify": "^14.4.0",
     "express": "^4.15.4",
