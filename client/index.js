@@ -1,4 +1,8 @@
+const check_fetch_status = require('./check_fetch_status');
+const geocode_address = require('./geocoding');
 const leaflet = require('leaflet');
+const microformats = require('./microformats');
+const prepare_query_url = require('./prepare_query_url');
 require('leaflet.markercluster');
 require('whatwg-fetch');
 
@@ -8,16 +12,6 @@ let marker_layer;
 // Returns, in an array, all the parts of "text" that look like HTTP or HTTPS URLs.
 function extract_urls(text) {
 	return text.match(/(\bhttps?:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig);
-}
-
-function check_fetch_status(response) {
-	if (response.status >= 200 && response.status < 300) {
-		return response;
-	} else {
-		const error = new Error(response.statusText);
-		error.response = response;
-		throw error;
-	}
 }
 
 function initialize_map() {
@@ -48,10 +42,12 @@ function map_these_urls_handler() {
 
 	const urls = extract_urls(entered_text);
 	const request_promises = urls.map(function(url) {
-		const request_uri = document.location.origin + '/extract_locations?url=' + encodeURIComponent(url);
+		const request_uri = prepare_query_url(document.location.origin + '/proxy', {url: url});
 		return fetch(request_uri)
 			.then(check_fetch_status)
-			.then(response => response.json())
+			.then(response => response.text())
+			.then(microformats.find_locatable_microformats)
+			.then(places => microformats.geotag_places(places, url, geocode_address))
 			.then(function(places) {
 				places.forEach(place =>
 					leaflet.marker([place.latitude, place.longitude])
