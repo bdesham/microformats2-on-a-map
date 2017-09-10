@@ -1,8 +1,12 @@
 const check_fetch_status = require('./check_fetch_status');
+const package = require('../package');
 const prepare_query_url = require('./prepare_query_url');
 require('whatwg-fetch');
 
 const cache = new Map();
+
+const user_agent = 'microformats2-on-a-map/' + package.version
+	+ ' (+https://github.com/bdesham/microformats2-on-a-map)';
 
 function geocode_address(address) {
 	if (cache.has(address)) {
@@ -19,8 +23,11 @@ function geocode_address(address) {
 		namedetails: 0
 	});
 
-	return fetch(url)
-		.then(check_fetch_status)
+	return fetch(url, {
+		headers: {
+			'User-Agent': user_agent
+		}
+	}).then(check_fetch_status)
 		.then(response => response.json())
 		.then(function(body) {
 			if (body.length === 0) {
