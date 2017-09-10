@@ -17,6 +17,10 @@
   ],
   "author": "Benjamin Esham",
   "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bdesham/microformats2-on-a-map.git"
+  },
   "dependencies": {
     "browserify": "^14.4.0",
     "express": "^4.15.4",
