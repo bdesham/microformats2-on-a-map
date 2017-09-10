@@ -37,9 +37,20 @@ header {
 	font-size: 1.25rem;
 	border: 1px solid #6CA300;
 	border-radius: 0.4rem;
-	/*border-bottom: 1px solid #509000;*/
 	box-shadow: rgba(0,0,0,1) 0 1px 0;
 	padding: 0.4rem 0.8rem;
+}
+
+#do-it:hover {
+	border-top-color: #5d8c00;
+	background: #5d8c00;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+#do-it:active {
+	border-top-color: #77b300;
+	background: #77b300;
 }
 
 #map {
