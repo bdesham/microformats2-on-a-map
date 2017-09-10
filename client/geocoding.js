@@ -6,12 +6,8 @@ const cache = new Map();
 
 function geocode_address(address) {
 	if (cache.has(address)) {
-		console.log(`Address "${address}" was cached`);
-		const cached_value = cache.get(address);
-		return cached_value;
+		return cache.get(address);
 	}
-
-	console.log(`Geocoding "${address}"`);
 
 	const url = prepare_query_url('http://nominatim.openstreetmap.org/search', {
 		q: address,
