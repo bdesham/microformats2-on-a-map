@@ -6,7 +6,7 @@
   "scripts": {
     "build": "browserify client/index.js -o client/bundle.js",
     "dev": "concurrently \"watchify client/index.js -o client/bundle.js\" \"npm start\"",
-    "postinstall": "cp node_modules/leaflet/dist/leaflet.css node_modules/leaflet.markercluster/dist/MarkerCluster*.css client",
+    "postinstall": "node copy_static_files.js",
     "start": "node server/index.js"
   },
   "keywords": [
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
+    "fs-extra": "^4.0.1",
     "http-server": "^0.10.0",
     "watchify": "^3.9.0"
   }

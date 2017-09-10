@@ -94,7 +94,6 @@ if (process.env.GOOGLE_API_KEY) {
 const app = express();
 
 app.use(express.static('client'));
-app.use('/images', express.static('node_modules/leaflet/dist/images'));
 
 app.get('/extract_locations', function(req, res) {
 	const url = req.query.url;
