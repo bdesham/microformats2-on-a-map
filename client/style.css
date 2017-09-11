@@ -8,12 +8,12 @@ body {
 	margin: 0 1rem;
 }
 
-.green {
-	color: #6CA300;
-}
-
 header {
 	flex: 0 1 auto;
+}
+
+.green {
+	color: #6CA300;
 }
 
 #main-container {
