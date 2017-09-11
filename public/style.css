@@ -1,0 +1,37 @@
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: "Avenir Next", "Avenir", sans-serif;
+	max-height: 100vh;
+	padding: 0;
+	margin: 0 1rem;
+}
+
+.green {
+	color: #6CA300;
+}
+
+header {
+	flex: 0 1 auto;
+}
+
+#main-container {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+
+#url-entry {
+	width: 25rem;
+}
+
+#urls {
+	width: 100%;
+}
+
+#map {
+	flex: 1;
+	/*height: 100vh;*/
+	margin: 1rem 0 1rem 1rem;
+}

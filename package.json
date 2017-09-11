@@ -1,0 +1,29 @@
+{
+  "name": "microformats2-on-a-map",
+  "version": "0.1.0",
+  "description": "Extract locations from webpages via microformats2 and display them on a map",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o public/bundle.js",
+    "postinstall": "cp node_modules/leaflet/dist/leaflet.css public",
+    "serve": "concurrently \"watchify index.js -o public/bundle.js\" \"http-server -p 8000 -c -1\"",
+    "test": "node test.js | tap-spec"
+  },
+  "author": "Benjamin Esham",
+  "license": "GPL-3.0",
+  "keywords": [
+    "microformats2",
+    "map",
+    "mapping",
+    "visualization"
+  ],
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "leaflet": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "http-server": "^0.10.0",
+    "watchify": "^3.9.0"
+  }
+}
