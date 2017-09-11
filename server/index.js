@@ -5,6 +5,10 @@ const app = express();
 
 app.use(express.static('client'));
 
+app.get('/health', function(req, res) {
+	res.sendStatus(200);
+});
+
 app.get('/proxy', function(req, res) {
 	const url = req.query.url;
 	if (url === undefined) {

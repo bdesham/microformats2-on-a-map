@@ -20,8 +20,16 @@
 <div id="main-container">
 
 	<div id="url-entry">
-		<p><textarea id="urls" rows="10"></textarea></p>
-		<p><button id="do-it">Map these URLs</button></p>
+		<div id="text-purpose-selector" class="hidden">
+			<p class="title">I want to enter…</p>
+			<p><label><input type="radio" name="text-purpose" value="html" checked="checked"/>
+				the <abbr>HTML</abbr> of one page to map</label></p>
+			<p><label><input type="radio" name="text-purpose" value="urls"/>
+				the <abbr>URL</abbr>s of several pages to map</label></p>
+		</div>
+		<p id="enter-html-instruction" class="title">Enter the <abbr>HTML</abbr> of a page to map:</p>
+		<p><textarea id="urls" rows="20"></textarea></p>
+		<p><button id="do-it">Map these microformats</button></p>
 		<p>For more information on what this is and how it works, see <a href="https://github.com/bdesham/microformats2-on-a-map">the project’s README</a>. You can view and fork the code there too!</p>
 		<p class="legal">Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors. Geocoding provided by <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, also © OpenStreetMap contributors.</p>
 		<p class="legal">This application is © 2017 <a href="https://esham.io" rel="author">Benjamin Esham</a> and released under the <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="license"><abbr>GNU</abbr> <abbr>GPL</abbr> v3</a>.</p>

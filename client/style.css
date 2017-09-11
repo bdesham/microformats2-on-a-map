@@ -21,8 +21,22 @@ header {
 	flex: 1 1 auto;
 }
 
+#enter-html-instruction {
+	margin-bottom: 0;
+}
+
 #url-entry {
 	width: 25rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.hidden {
+	display: none;
+}
+
+.title {
+	font-weight: 500;
 }
 
 #urls {

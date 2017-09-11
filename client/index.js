@@ -35,7 +35,7 @@ function initialize_map() {
 	map.addLayer(marker_layer);
 }
 
-function map_these_urls_handler() {
+function handle_urls() {
 	marker_layer.clearLayers();
 
 	const entered_text = document.getElementById('urls').value;
@@ -63,5 +63,25 @@ function map_these_urls_handler() {
 	});
 }
 
+function do_it() {
+	const selection = document.querySelector('input[name=text-purpose]:checked').value;
+	if (selection === 'html') {
+
+	} else if (selection === 'urls') {
+		handle_urls();
+	}
+}
+
+function check_for_server() {
+	fetch(document.location.origin + '/health')
+		.then(function(response) {
+			if (response.status === 200) {
+				document.getElementById('text-purpose-selector').classList.remove('hidden');
+				document.getElementById('enter-html-instruction').classList.add('hidden');
+			}
+		});
+}
+
 initialize_map();
-document.getElementById('do-it').addEventListener('click', map_these_urls_handler);
+document.getElementById('do-it').addEventListener('click', do_it);
+check_for_server();
