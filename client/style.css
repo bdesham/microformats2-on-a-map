@@ -53,6 +53,10 @@ header {
 	background: #77b300;
 }
 
+.legal {
+	font-size: 0.8rem;
+}
+
 #map {
 	flex: 1;
 	margin: 1rem 0 1rem 1rem;

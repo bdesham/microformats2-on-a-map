@@ -1,4 +1,5 @@
-// Polyfill from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+// This polyfill was taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+// and therefore it's in the public domain.
 if (!Object.entries) {
 	Object.entries = function(obj) {
 		const ownProps = Object.keys(obj);
