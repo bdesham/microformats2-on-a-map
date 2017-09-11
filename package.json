@@ -33,7 +33,6 @@
   "devDependencies": {
     "concurrently": "^3.5.0",
     "fs-extra": "^4.0.1",
-    "http-server": "^0.10.0",
     "watchify": "^3.9.0"
   }
 }
