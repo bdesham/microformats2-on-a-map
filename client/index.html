@@ -28,7 +28,23 @@
 				the <abbr>URL</abbr>s of several pages to map</label></p>
 		</div>
 		<p id="enter-html-instruction" class="title">Enter the <abbr>HTML</abbr> of a page to map:</p>
-		<p><textarea id="urls" rows="20"></textarea></p>
+		<p><textarea id="urls" rows="20">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Microformats2 location example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+	&lt;p class=&quot;h-geo&quot;&gt;The gold is buried at &lt;span class=&quot;p-latitude&quot;&gt;44.059732&lt;/span&gt;, &lt;span class=&quot;p-longitude&quot;&gt;-74.041575&lt;/span&gt;.&lt;/p&gt;
+
+	&lt;p class=&quot;h-adr&quot;&gt;One of the parks is located at &lt;span class=&quot;p-street-address&quot;&gt;67 Mulberry Street&lt;/span&gt;, &lt;span class=&quot;p-locality&quot;&gt;New York&lt;/span&gt;, &lt;span class=&quot;p-region&quot;&gt;NY&lt;/span&gt;.&lt;/p&gt;
+
+	&lt;p class=&quot;h-adr&quot;&gt;The other one is &lt;span class=&quot;p-street-address&quot;&gt;75 Battery Place&lt;/span&gt;, &lt;span class=&quot;p-locality&quot;&gt;New York&lt;/span&gt;, &lt;span class=&quot;p-region&quot;&gt;NY&lt;/span&gt;.&lt;/p&gt;
+
+	&lt;p class=&quot;h-adr&quot;&gt;The worst snow, though, is in &lt;span class=&quot;p-locality&quot;&gt;Buffalo&lt;/span&gt; in &lt;span class=&quot;p-region&quot;&gt;New York&lt;/span&gt;.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</textarea></p>
 		<p><button id="do-it">Map these microformats</button></p>
 		<p>For more information on what this is and how it works, see <a href="https://github.com/bdesham/microformats2-on-a-map">the project’s README</a>. (You can view and fork the code there too!) If you run this code locally you will gain the ability to scan several pages at once for locations.</p>
 		<p class="legal">Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors. Geocoding provided by <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, also © OpenStreetMap contributors.</p>
