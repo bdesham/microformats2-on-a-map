@@ -10,7 +10,7 @@ const user_agent = 'microformats2-on-a-map/' + package.version
 
 function geocode_address(address) {
 	if (cache.has(address)) {
-		return cache.get(address);
+		return Promise.resolve(cache.get(address));
 	}
 
 	const url = prepare_query_url('https://nominatim.openstreetmap.org/search', {

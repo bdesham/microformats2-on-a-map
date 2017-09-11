@@ -29,7 +29,7 @@ function try_to_extract_h_geo(item) {
 function geotag_place(place, url, geocode) {
 	const geo = try_to_extract_h_geo(place);
 	if (geo) {
-		return geo;
+		return Promise.resolve(geo);
 	}
 
 	const address_pieces = [
