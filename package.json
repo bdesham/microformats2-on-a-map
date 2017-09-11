@@ -22,17 +22,17 @@
     "url": "git://github.com/bdesham/microformats2-on-a-map.git"
   },
   "dependencies": {
-    "browserify": "^14.4.0",
-    "express": "^4.15.4",
-    "leaflet": "^1.2.0",
-    "leaflet.markercluster": "^1.1.0",
-    "microformat-node": "^2.0.1",
-    "request": "^2.81.0",
-    "whatwg-fetch": "^2.0.3"
+    "browserify": "~14.4.0",
+    "express": "~4.15.4",
+    "leaflet": "~1.2.0",
+    "leaflet.markercluster": "~1.1.0",
+    "microformat-node": "~2.0.1",
+    "request": "~2.81.0",
+    "whatwg-fetch": "~2.0.3"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "fs-extra": "^4.0.1",
-    "watchify": "^3.9.0"
+    "concurrently": "~3.5.0",
+    "fs-extra": "~4.0.1",
+    "watchify": "~3.9.0"
   }
 }
