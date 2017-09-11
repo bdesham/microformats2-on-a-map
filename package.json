@@ -1,6 +1,6 @@
 {
   "name": "microformats2-on-a-map",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Extract locations from webpages via microformats2 and display them on a map",
   "main": "server/index.js",
   "scripts": {
