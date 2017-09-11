@@ -20,7 +20,7 @@ function initialize_map() {
 		zoom: 1
 	});
 
-	const osm_url = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	const osm_url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	const osm_attribution = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 	const osm_layer = new leaflet.TileLayer(osm_url, {
 		minZoom: 1,

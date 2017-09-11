@@ -13,7 +13,7 @@ function geocode_address(address) {
 		return cache.get(address);
 	}
 
-	const url = prepare_query_url('http://nominatim.openstreetmap.org/search', {
+	const url = prepare_query_url('https://nominatim.openstreetmap.org/search', {
 		q: address,
 		format: 'json',
 		polygon_kml: 0,
