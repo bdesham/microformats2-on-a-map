@@ -1,8 +1,8 @@
 const microformats = require('microformat-node');
 
 function find_locatable_microformats(html) {
-	const objects = microformats.get({html: html});
-	return objects.items.filter(item => item.type.includes('h-adr') || item.type.includes('h-geo'));
+	return microformats.getAsync({html: html})
+		.then(objects => objects.items.filter(item => item.type.includes('h-adr') || item.type.includes('h-geo')));
 }
 
 function geotag_places(places, containing_url, geocode) {
@@ -40,7 +40,13 @@ function geotag_place(place, url, geocode) {
 		place.properties["country-name"]
 	];
 	const address = address_pieces.filter(value => value !== undefined).join(', ');
-	const title = `${address} (${url})`;
+
+	let title;
+	if (url) {
+		title = `${address} (${url})`;
+	} else {
+		title = address;
+	}
 
 	return geocode(address)
 		.then(coords => Object.assign({title: title}, coords));
