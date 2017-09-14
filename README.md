@@ -29,7 +29,7 @@ You can also run the app on your own computer (or server) as long as you have No
 1. `npm install`
 2. `npm start`
 
-If you’re going to be modifying the client-side code, replace the second command with `npm run dev` so that the client-side bundle will be rebuilt each time you change the client-side files.
+The application will be viewable at [http://localhost:8000](http://localhost:8000). If you’re going to be modifying the client-side code, replace the second command with `npm run dev` so that the client-side bundle will be rebuilt each time you change the client-side files.
 
 ## Current limitations
 
