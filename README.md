@@ -41,6 +41,7 @@ This is very much a work in progress. Things that need to be improved:
 - The information shown when the user clicks on a map marker is pretty minimal, and may not provide enough context to understand where that marker came from.
 - The app is basically unusable on screens narrower than 900&nbsp;px or so.
 - In order to comply with the [usage policies][policies] for Nominatim, which provides geocoding, there should be a one-second delay between geocoding requests. (This needs to be set up to take advantage of the cache.)
+- I have not tested which browsers this is compatible with. I have used ES6 syntax pretty freely, and this isn’t ever transpiled to ES5; it may be necessary to add Babel or Google Closure Compiler to the build process to make the application compatible with older browsers.
 
 [policies]: https://operations.osmfoundation.org/policies/nominatim/
 
