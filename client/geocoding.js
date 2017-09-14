@@ -6,7 +6,7 @@ require('whatwg-fetch');
 const cache = new Map();
 
 const user_agent = 'microformats2-on-a-map/' + package.version
-	+ ' (+https://github.com/bdesham/microformats2-on-a-map)';
+	+ ' (+https://esham.io/projects/microformats2-on-a-map)';
 
 function geocode_address(address) {
 	if (cache.has(address)) {
