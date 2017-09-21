@@ -4,7 +4,7 @@ A web application to extract [microformats2]-formatted locations from webpages a
 
 [microformats2]: http://microformats.org
 
-<center><img src="https://github.com/bdesham/microformats2-on-a-map/raw/master/screenshot.png" alt="Screenshot of the application" width="836"/></center>
+<img src="https://github.com/bdesham/microformats2-on-a-map/raw/master/screenshot.png" alt="Screenshot of the application" width="836"/>
 
 ## How to use it
 
