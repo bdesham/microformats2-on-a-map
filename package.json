@@ -7,7 +7,8 @@
     "build": "browserify client/index.js -o client/bundle.js",
     "dev": "concurrently \"watchify client/index.js -o client/bundle.js\" \"npm start\"",
     "postinstall": "node copy_static_files.js",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "test": "node client_test/*.js | tap-spec"
   },
   "keywords": [
     "microformats2",
@@ -31,8 +32,10 @@
     "whatwg-fetch": "~2.0.3"
   },
   "devDependencies": {
+    "blue-tape": "~1.0.0",
     "concurrently": "~3.5.0",
     "fs-extra": "~4.0.1",
+    "tap-spec": "~4.1.1",
     "watchify": "~3.9.0"
   }
 }
