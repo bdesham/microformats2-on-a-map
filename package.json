@@ -28,6 +28,7 @@
     "leaflet": "~1.2.0",
     "leaflet.markercluster": "~1.1.0",
     "microformat-node": "~2.0.1",
+    "object.values": "~1.0.4",
     "request": "~2.81.0",
     "whatwg-fetch": "~2.0.3"
   },
