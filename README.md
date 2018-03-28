@@ -33,17 +33,9 @@ The application will be viewable at [http://localhost:8000](http://localhost:800
 
 ## Current limitations
 
-This is very much a work in progress. Things that need to be improved:
+This is very much a work in progress. The outstanding issues are listed [in the issue tracker][issues].
 
-- Error handling is basically non-existent.
-- Parsing and geocoding can take a while and no feedback is provided to the user as it’s happening.
-- Nested microformats are not currently found by the parser, so if there is an `h-adr` inside an `h-entry` (for example) then this address will not end up on the map.
-- The information shown when the user clicks on a map marker is pretty minimal, and may not provide enough context to understand where that marker came from.
-- The app is basically unusable on screens narrower than 900&nbsp;px or so.
-- In order to comply with the [usage policies][policies] for Nominatim, which provides geocoding, there should be a one-second delay between geocoding requests. (This needs to be set up to take advantage of the cache.)
-- I have not tested which browsers this is compatible with. I have used ES6 syntax pretty freely, and this isn’t ever transpiled to ES5; it may be necessary to add Babel or Google Closure Compiler to the build process to make the application compatible with older browsers.
-
-[policies]: https://operations.osmfoundation.org/policies/nominatim/
+[issues]: https://github.com/bdesham/microformats2-on-a-map/issues
 
 ## Author
 
