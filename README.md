@@ -94,7 +94,7 @@ This application displays map data from [OpenStreetMap], including through the [
 
 The application itself is released under the following terms:
 
-Copyright © 2017 Benjamin D. Esham.
+Copyright © 2017, 2019 Benjamin D. Esham.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
