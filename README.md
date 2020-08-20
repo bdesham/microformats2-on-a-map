@@ -1,10 +1,10 @@
-# Microformats2 on a Map [![Build Status](https://travis-ci.org/bdesham/microformats2-on-a-map.svg?branch=master)](https://travis-ci.org/bdesham/microformats2-on-a-map)
+# Microformats2 on a Map [![Build Status](https://travis-ci.org/bdesham/microformats2-on-a-map.svg?branch=main)](https://travis-ci.org/bdesham/microformats2-on-a-map)
 
 A web application to extract [microformats2]-formatted locations from webpages and display them on a map.
 
 [microformats2]: http://microformats.org
 
-<img src="https://github.com/bdesham/microformats2-on-a-map/raw/master/screenshot.png" alt="Screenshot of the application" width="836"/>
+<img src="https://github.com/bdesham/microformats2-on-a-map/raw/main/screenshot.png" alt="Screenshot of the application" width="836" height="545"/>
 
 ## How to use it
 
