@@ -57,7 +57,7 @@ to start the app in the foreground (as if you had just run `npm start` normally)
 
 If you’re going to be modifying the code you’ll want to connect your local copy of the repository to `/app` in the Docker container. You can do this with the flag `-v "$PWD:/app"`. For example, if you want to make local changes and then run the tests, you could run
 
-    docker run -it -v "$PWD:/app" bdesham/microformats2-on-a-map npm test
+    docker run -it -v "$PWD:/app" bdesham/microformats2-on-a-map sh -c 'npm test'
 
 If you want to serve the application, rebuilding the client-side bundle whenever you change the client-side files, run
 
