@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "browserify": "~14.4.0",
-    "express": "~4.16.3",
+    "express": "~4.16.4",
     "leaflet": "~1.2.0",
     "leaflet.markercluster": "~1.1.0",
     "microformat-node": "~2.0.1",
@@ -37,7 +37,7 @@
     "blue-tape": "~1.0.0",
     "concurrently": "~3.5.0",
     "fs-extra": "~4.0.1",
-    "tap-spec": "~4.1.1",
-    "watchify": "~3.9.0"
+    "tap-spec": "~5.0.0",
+    "watchify": "~3.11.1"
   }
 }
