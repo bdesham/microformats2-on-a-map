@@ -1,6 +1,8 @@
-# Microformats2 on a Map [![Build Status](https://travis-ci.org/bdesham/microformats2-on-a-map.svg?branch=main)](https://travis-ci.org/bdesham/microformats2-on-a-map)
+# Microformats2 on a Map
 
 A web application to extract [microformats2]-formatted locations from webpages and display them on a map.
+
+⚠️ **Notice:** This project is no longer maintained. It may have severe security or compatibility problems. Use it at your own risk!
 
 [microformats2]: http://microformats.org
 
@@ -13,22 +15,15 @@ Enter some HTML in the text box and click the “Map these microformats” butto
 [adr]: http://microformats.org/wiki/h-adr
 [geo]: http://microformats.org/wiki/h-geo
 
-If you’re running your own copy of the app you’ll also have the option to enter one or more URLs into the text box. When you click “Map these microformats,” the app will fetch each page in turn and add all of the locations it finds to the map.
+You also have the option to enter one or more URLs into the text box. When you click “Map these microformats,” the app will fetch each page in turn and add all of the locations it finds to the map.
 
 In either case, clicking one of the markers on the map will show a popup with the corresponding address. If there are multiple markers in the same area, they will be coalesced into a colorful circle with a number on it. If you click this circle then the map will zoom in (if there are markers at multiple locations) or expand the markers so that you can see them individually.
 
 ## Where to use it
 
-### Hosted version
-
-You can use [this hosted version of the app][app] right in your browser. Because of [CORS] restrictions, though, you will only be able to enter the HTML for one page; you won’t be able to enter multiple URLs to scan.
-
-[app]: https://esham.io/projects/microformats2-on-a-map
-[CORS]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-
 ### Running locally with Node
 
-You can also run the app on your own computer (or server) as long as you have Node.js installed. Just clone this repository and then run the following commands:
+You can run the app on your own computer as long as you have Node.js installed. (It was written against Node.js 10.15; it may be incompatible with earlier or later versions.) Just clone this repository and then run the following commands:
 
 1. `npm install`
 2. `npm start`
@@ -69,9 +64,9 @@ You could also run
 
 if you want a full-fledged shell within the Docker container. From that shell you can run `npm run dev`, `npm test`, or any other command you’d like.
 
-## Current limitations
+## Limitations
 
-This is very much a work in progress. The outstanding issues are listed [in the issue tracker][issues].
+This project is a tech demo and there are significant improvements that could be made to both the user experience and the behind-the-scenes code. Some outstanding issues are listed [in the issue tracker][issues]. However, this project is **no longer maintained** and I do not intend to work on it further.
 
 [issues]: https://github.com/bdesham/microformats2-on-a-map/issues
 
@@ -79,7 +74,7 @@ This is very much a work in progress. The outstanding issues are listed [in the 
 
 This program was created by [Benjamin Esham](https://esham.io).
 
-This project is [hosted on GitHub](https://github.com/bdesham/microformats2-on-a-map). Please feel free to submit pull requests.
+This project is [hosted on GitHub](https://github.com/bdesham/microformats2-on-a-map). It is **no longer being developed** and is left on GitHub only in the hope that someone will find the code interesting or useful.
 
 ## Version history
 
