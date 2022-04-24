@@ -6,8 +6,6 @@ A web application to extract [microformats2]-formatted locations from webpages a
 
 [microformats2]: http://microformats.org
 
-<img src="https://github.com/bdesham/microformats2-on-a-map/raw/main/screenshot.png" alt="Screenshot of the application" width="600" height="391"/>
-
 ## How to use it
 
 Enter some HTML in the text box and click the “Map these microformats” button. The app will convert instances of the [`h-adr`][adr] and [`h-geo`][geo] microformats into locations and display them on the map. (This process may take a minute, so please be patient!)
@@ -16,6 +14,8 @@ Enter some HTML in the text box and click the “Map these microformats” butto
 [geo]: http://microformats.org/wiki/h-geo
 
 You also have the option to enter one or more URLs into the text box. When you click “Map these microformats,” the app will fetch each page in turn and add all of the locations it finds to the map.
+
+<img src="https://github.com/bdesham/microformats2-on-a-map/raw/main/screenshot.png" alt="Screenshot of the application" width="600" height="391"/>
 
 In either case, clicking one of the markers on the map will show a popup with the corresponding address. If there are multiple markers in the same area, they will be coalesced into a colorful circle with a number on it. If you click this circle then the map will zoom in (if there are markers at multiple locations) or expand the markers so that you can see them individually.
 
